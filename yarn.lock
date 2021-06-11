@@ -741,10 +741,10 @@ normalize-range@^0.1.2:
   resolved "https://registry.yarnpkg.com/normalize-range/-/normalize-range-0.1.2.tgz#2d10c06bdfd312ea9777695a4d28439456b75942"
   integrity sha1-LRDAa9/TEuqXd2laTShDlFa3WUI=
 
-notiwind@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/notiwind/-/notiwind-1.2.0.tgz#4444043ad359c3c508b260eeebca936cd01dff55"
-  integrity sha512-tvgCeKuO3FZz55Dp910sTTONGLuRAi5s0i8gKjSlUmp9ZVlm0/EdfkK70rKEDFXCmTVsg5jz8zoXpvc3SnDyyw==
+notiwind@^1.2.2:
+  version "1.2.2"
+  resolved "https://registry.yarnpkg.com/notiwind/-/notiwind-1.2.2.tgz#d7fb1c3c6dd9406c7eb75bc64d64cc2cbd3a4a09"
+  integrity sha512-P79QPvrgNo3bqpMfgayYmf/yTFcrPwasM9FpfP6A1ftd4SmRXYraI+sfHT2izFrbmzb75IenpbR0VOa3o53k0g==
 
 object-assign@^4.1.1:
   version "4.1.1"
