@@ -8,15 +8,15 @@
     "preview": "vite preview"
   },
   "dependencies": {
-    "notiwind": "^1.2.2",
-    "vue": "^3.0.5"
+    "notiwind": "^1.2.3",
+    "vue": "^3.2.11"
   },
   "devDependencies": {
-    "@vitejs/plugin-vue": "^1.2.2",
-    "@vue/compiler-sfc": "^3.0.5",
-    "autoprefixer": "^10.2.5",
-    "postcss": "^8.3.0",
-    "tailwindcss": "^2.1.2",
-    "vite": "^2.3.3"
+    "@vitejs/plugin-vue": "^1.6.2",
+    "@vue/compiler-sfc": "^3.2.11",
+    "autoprefixer": "^10.3.4",
+    "postcss": "^8.3.6",
+    "tailwindcss": "^2.2.14",
+    "vite": "^2.5.6"
   }
 }
