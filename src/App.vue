@@ -2,8 +2,8 @@
   <div class="flex flex-col justify-center min-h-screen bg-gray-200">
     <div class="flex items-center justify-center flex-1 space-x-5">
       <button class="px-4 py-2 font-bold text-white bg-green-500 rounded hover:bg-green-600 focus:outline-none focus:ring" @click="onClickTop">
-          Top notification
-        </button>
+        Top notification
+      </button>
       <button class="px-4 py-2 font-bold text-white bg-red-500 rounded hover:bg-red-600 focus:outline-none focus:ring" @click="onClickBot">
         Bottom notification
       </button>
