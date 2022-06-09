@@ -9,7 +9,7 @@
       </button>
     </div>
 
-    <div class="flex justify-center flex-shrink-0 py-4">
+    <div class="flex justify-center py-4 shrink-0">
       <a class="flex items-center text-lg font-semibold text-gray-600 group hover:text-gray-700" href="https://github.com/emmanuelsw/notiwind-demo">
         <svg class="w-6 h-6 mr-2 text-gray-600 fill-current group-hover:text-gray-700" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24">
           <path d="M12 2.247a10 10 0 00-3.162 19.487c.5.088.687-.212.687-.475 0-.237-.012-1.025-.012-1.862-2.513.462-3.163-.613-3.363-1.175a3.636 3.636 0 00-1.025-1.413c-.35-.187-.85-.65-.013-.662a2.001 2.001 0 011.538 1.025 2.137 2.137 0 002.912.825 2.104 2.104 0 01.638-1.338c-2.225-.25-4.55-1.112-4.55-4.937a3.892 3.892 0 011.025-2.688 3.594 3.594 0 01.1-2.65s.837-.262 2.75 1.025a9.427 9.427 0 015 0c1.912-1.3 2.75-1.025 2.75-1.025a3.593 3.593 0 01.1 2.65 3.869 3.869 0 011.025 2.688c0 3.837-2.338 4.687-4.563 4.937a2.368 2.368 0 01.675 1.85c0 1.338-.012 2.413-.012 2.75 0 .263.187.575.687.475A10.005 10.005 0 0012 2.247z"/>
@@ -23,7 +23,7 @@
         <div class="w-full max-w-sm">
           <Notification
             v-slot="{ notifications, close }"
-            enter="transform ease-out duration-300 transition"
+            enter="ease-out duration-300 transition"
             enter-from="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-4"
             enter-to="translate-y-0 opacity-100 sm:translate-x-0"
             leave="transition ease-in duration-500"
@@ -39,7 +39,7 @@
             >
               <div class="p-4">
                 <div class="flex items-start">
-                  <div class="flex-shrink-0">
+                  <div class="shrink-0">
                     <svg class="w-6 h-6 text-green-400" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                     </svg>
@@ -48,7 +48,7 @@
                     <p class="font-semibold text-gray-800">{{ notification.title }}</p>
                     <p class="text-sm font-semibold text-gray-500">{{ notification.text }}</p>
                   </div>
-                  <div class="flex flex-shrink-0 ml-4">
+                  <div class="flex ml-4 shrink-0">
                     <button @click="close(notification.id)" class="inline-flex text-gray-400 bg-white rounded-md hover:text-gray-500 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-gray-400">
                       <span class="sr-only">Close</span>
                       <svg class="w-5 h-5" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor" aria-hidden="true">
@@ -69,7 +69,7 @@
         <div class="w-full max-w-sm">
           <Notification
             v-slot="{ notifications }"
-            enter="transform ease-out duration-300 transition"
+            enter="ease-out duration-300 transition"
             enter-from="translate-y-2 opacity-0 sm:translate-y-0 sm:translate-x-4"
             enter-to="translate-y-0 opacity-100 sm:translate-x-0"
             leave="transition ease-in duration-500"
@@ -104,33 +104,23 @@
   </div>
 </template>
 
-<script>
-import { notify } from 'notiwind'
+<script setup>
+import { notify, Notification, NotificationGroup } from 'notiwind'
 
-export default {
-  name: "App",
-  setup() {
-    function onClickTop() {
-      notify({
-        group: "top",
-        title: "Success",
-        text: "Your account was created 👌"
-      }, 4000)
-    }
+function onClickTop() {
+  notify({
+    group: "top",
+    title: "Success",
+    text: "Your account was created 👌"
+  }, 4000)
+}
 
-    function onClickBot() {
-      notify({
-        group: "bottom",
-        title: "Error",
-        text: "Your email is already used!"
-      }, 4000)
-    }
-
-    return {
-      onClickTop,
-      onClickBot
-    }
-  }
+function onClickBot() {
+  notify({
+    group: "bottom",
+    title: "Error",
+    text: "Your email is already used!"
+  }, 4000)
 }
 </script>
 
